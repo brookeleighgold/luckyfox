@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Piazzolla:opsz,wght@8..30,400;8..30,600;8..30,800&display=swap');
 
 :root {
-  --bg-color: #0a0b0e;
-  --panel-bg: rgba(47, 181, 143, 0.03);
-  --panel-bg-hover: rgba(47, 181, 143, 0.08);
-  --panel-border: rgba(255, 255, 255, 0.06);
+  --bg-color: #161922;
+  --panel-bg: rgba(47, 181, 143, 0.05);
+  --panel-bg-hover: rgba(47, 181, 143, 0.1);
+  --panel-border: rgba(255, 255, 255, 0.08);
   --panel-border-hover: rgba(47, 181, 143, 0.4);
   --text-main: #f0f3f6;
   --text-muted: #9aa0a6;
@@ -162,7 +162,7 @@ p {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(10, 11, 14, 0.85);
+  background: rgba(22, 25, 34, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 100;
@@ -181,7 +181,7 @@ p {
 }
 
 .modal-content {
-  background: #111318;
+  background: #1c1f2a;
   border: 1px solid var(--panel-border-hover);
   border-radius: 24px;
   max-width: 1300px;
