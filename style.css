@@ -435,112 +435,162 @@ p {
   .animated-name { font-size: 2.5rem; background-size: contain; }
 }
 
-/* --- Creative Layout Resume Page --- */
-.resume-theme {
-    background: #f7f6f1;
+/* --- EDITORIAL RESUME PAGE PERFECT MATCH --- */
+.editorial-body {
+    background: #f7f6f1; /* Off-white cream background */
     color: #0b291d;
     font-family: var(--font-body);
     margin: 0; padding: 0; min-height: 100vh;
 }
 
-.resume-nav {
+/* Nav */
+.editorial-nav {
+    max-width: 1200px; margin: 0 auto;
     display: flex; justify-content: space-between; align-items: center;
-    padding: 1.5rem 4rem; background: #fff; border-bottom: 1px solid #e2e0d8;
+    padding: 2.5rem 1rem;
 }
-
-.resume-nav span { 
-    font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; text-transform: uppercase; 
+.editorial-nav .ed-brand {
+    font-family: var(--font-heading); font-weight: 800; font-size: 1.1rem; letter-spacing: 1px; color: #0b291d; text-transform: uppercase;
 }
-
-.resume-nav-link { 
-    margin: 0 1rem; color: #0b291d; text-decoration: none; font-size: 0.9rem; text-transform: uppercase; font-weight: 600; 
-    transition: color 0.3s ease;
+.editorial-nav .ed-links { display: flex; gap: 3rem; }
+.editorial-nav .ed-links a {
+    text-decoration: none; color: #0b291d; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s;
 }
+.editorial-nav .ed-links a:hover { color: #d8aa53; }
 
-.resume-nav-link:hover { color: #d8aa53; }
-
-.resume-dl-btn {
+.editorial-nav .ed-btn {
     background: #d8aa53; color: #0b291d; text-decoration: none;
-    padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; text-transform: uppercase;
-    transition: transform 0.3s ease;
+    padding: 0.8rem 1.8rem; border-radius: 50px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;
+    transition: background 0.3s;
+}
+.editorial-nav .ed-btn:hover { background: #c59740; }
+
+/* Grid Main */
+.editorial-grid {
+    max-width: 1200px; margin: 0 auto; padding: 1rem 1rem 4rem 1rem;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 1.5rem;
 }
 
-.resume-dl-btn:hover { transform: scale(1.05); }
-
-.resume-grid {
-    display: grid; padding: 2.5rem 4rem; max-width: 1400px; margin: 0 auto; gap: 1.5rem;
-    grid-template-columns: 2fr 1fr;
+.ed-card {
+    background: #ffffff; border-radius: 20px; padding: 3rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.025);
 }
 
-.res-box {
-    background: #fff; border-radius: 12px; padding: 2.5rem;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.03);
+/* Row 1 */
+.ed-title-card {
+    display: flex; flex-direction: column; justify-content: center;
+}
+.ed-tag {
+    font-size: 0.75rem; text-transform: uppercase; font-weight: 800; color: #d8aa53; letter-spacing: 2px; margin-bottom: 1rem;
+}
+.ed-h1 {
+    font-family: var(--font-heading); font-size: 4.5rem; font-weight: 400; color: #0b291d; margin: 0 0 1.5rem 0;
+    -webkit-text-fill-color: initial; background: none; text-shadow: none; line-height: 1.1;
+}
+.ed-summary {
+    font-size: 1.15rem; font-style: italic; color: #3a4741; line-height: 1.6; margin-bottom: 2.5rem; max-width: 90%;
+}
+.ed-badge-row {
+    display: flex; align-items: center; gap: 1rem; margin-top: auto;
+}
+.ed-circle-badge {
+    background: #0b291d; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; font-family: var(--font-heading);
+}
+.ed-badge-text {
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
 }
 
-.res-title-box { grid-column: 1; }
-
-.res-portrait { 
-    grid-column: 2; padding: 0; overflow: hidden; background: #133a2a; 
-    display: flex; align-items: center; justify-content: center;
+.ed-portrait-card {
+    padding: 0; overflow: hidden; display: flex;
+}
+.ed-portrait-card img {
+    width: 100%; height: 100%; object-fit: cover; object-position: top; /* Prevents leg/head crop issues on tall cards */
 }
 
-.res-portrait img { width: 100%; height: 100%; object-fit: cover; opacity: 0.95; }
-
-.res-experience { grid-column: 1; }
-.res-skills { grid-column: 2; background: #133a2a; color: #f0f3f6; }
-.res-education { grid-column: span 2; }
-
-.res-tag { 
-    font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: #d8aa53; letter-spacing: 2px; 
+/* Row 2 */
+.ed-h2 {
+    font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #0b291d;
+    border-bottom: 1px solid #e2e0d8; padding-bottom: 1rem; margin-bottom: 2rem; margin-top: 0;
 }
 
-.res-name { 
-    font-family: var(--font-heading); font-size: 4rem; font-weight: 400; margin: 1rem 0; color: #0b291d; text-transform: none; 
-    -webkit-text-fill-color: initial; background: none;
+/* Timeline */
+.ed-timeline-item {
+    display: grid; grid-template-columns: 140px 1fr; gap: 2rem;
+    margin-bottom: 2.5rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 2.5rem;
+}
+.ed-time-meta {
+    display: flex; flex-direction: column; gap: 0.5rem;
+}
+.ed-date { font-size: 0.75rem; font-weight: 800; color: #d8aa53; letter-spacing: 1px; }
+.ed-role { font-size: 0.7rem; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+
+.ed-h3 {
+    font-family: var(--font-heading); font-size: 1.6rem; color: #0b291d; margin: -5px 0 1rem 0; font-weight: 400; background: none; -webkit-text-fill-color: initial;
+}
+.ed-job-content p {
+    font-size: 0.95rem; color: #3a4741; line-height: 1.6; margin-bottom: 1rem;
 }
 
-.res-summary { 
-    font-size: 1.3rem; font-style: italic; max-width: 85%; line-height: 1.5; color: #3a4741; 
+.ed-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.ed-pills span {
+    background: #f0f3f6; color: #555; padding: 0.3rem 0.8rem; border-radius: 50px; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
 }
 
-.res-section-title {
-    font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; color: #0b291d; border-bottom: 1px solid #e2e0d8; padding-bottom: 1rem; margin-bottom: 2rem;
+/* Skills Box */
+.ed-skills-card {
+    background: #0b291d; color: #fff;
+}
+.ed-skills-list {
+    list-style: none; padding: 0; margin: 0;
+}
+.ed-skills-list li {
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1); padding: 1rem 0;
+    font-size: 0.85rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+}
+.ed-skills-list li:last-child { border-bottom: none; }
+.ed-skill-score { color: #d8aa53; }
+
+.ed-skills-quote {
+    margin-top: 3.5rem; font-family: var(--font-heading); font-style: italic; font-size: 1.15rem; text-align: center; color: rgba(255,255,255,0.8); line-height: 1.5;
 }
 
-.res-job { display: flex; gap: 2rem; margin-bottom: 3rem; }
-.res-job-meta { flex: 0 0 150px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: #d8aa53; }
+/* Bottom Row */
+.ed-bottom-split {
+    grid-column: span 2;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 0.5rem;
+}
+.ed-edu-item {
+    border-bottom: 1px solid #e2e0d8; padding-bottom: 1.5rem; margin-bottom: 1.5rem;
+}
+.ed-edu-item p { font-size: 0.95rem; color: #3a4741; line-height: 1.5; margin: 0; }
 
-.res-job-details h3 { 
-    font-family: var(--font-heading); font-size: 1.6rem; color: #0b291d; margin-bottom: 0.5rem; text-transform: none; 
-    -webkit-text-fill-color: initial; background: none; margin-top: -5px;
+/* Footer */
+.ed-footer-wrapper {
+    background: #0b291d; padding: 3rem 1rem; margin-top: 1rem;
+}
+.ed-footer {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;
+    color: #fff;
+}
+.ed-footer .ed-brand {
+    font-family: var(--font-heading); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;
+}
+.ed-footer-links { display: flex; gap: 2rem; }
+.ed-footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; transition: color 0.3s; }
+.ed-footer-links a:hover { color: #d8aa53; }
+.ed-footer-location {
+    color: #d8aa53; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px;
 }
 
-.res-job-details ul { padding-left: 1.2rem; color: #3a4741; line-height: 1.6; }
-.res-job-details li { margin-bottom: 0.5rem; }
-
-.res-skill-row { 
-    border-bottom: 1px solid rgba(255,255,255,0.1); padding: 0.8rem 0; font-size: 0.9rem; letter-spacing: 1px; color: #e2e0d8; 
-}
-
-.skills-quote { 
-    margin-top: 3rem; font-family: var(--font-heading); font-style: italic; font-size: 1.2rem; text-align: center; color: #d8aa53; line-height: 1.5;
-}
-
-.res-education { display: flex; gap: 2rem; }
-.res-edu-item { flex: 1; border-bottom: 1px solid #e2e0d8; padding-bottom: 1.5rem; margin-bottom: 1.5rem;}
-.res-edu-item:last-child { border: none; }
-
-.res-edu-item h3 { 
-    font-family: var(--font-heading); font-size: 1.4rem; color: #0b291d; margin-bottom: 0.3rem;
-    -webkit-text-fill-color: initial; background: none; 
-}
-
-.res-edu-item p { font-size: 0.9rem; color: #3a4741; margin-bottom: 0.5rem; }
-.res-edu-item span { font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: #d8aa53; letter-spacing: 1px; }
-
+/* Mobile Responive */
 @media(max-width: 900px){
-    .resume-grid { grid-template-columns: 1fr; padding: 1rem; }
-    .res-title-box, .res-portrait, .res-experience, .res-skills, .res-education { grid-column: 1; }
-    .res-job { flex-direction: column; gap: 0.5rem; }
-    .res-summary { max-width: 100%; font-size: 1.1rem; }
+    .editorial-grid { grid-template-columns: 1fr; }
+    .ed-bottom-split { grid-column: span 1; grid-template-columns: 1fr; }
+    .ed-timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .editorial-nav { flex-direction: column; gap: 1.5rem; text-align: center; }
+    .ed-footer { flex-direction: column; text-align: center; }
 }
