@@ -126,12 +126,12 @@ const projectData = {
         tag: "<span class=\"lang-en\">Illustration</span><span class=\"lang-es\">Ilustración</span>",
         description: "<span class=\"lang-en\">I create digital illustrations that lean into political and satirical commentary, using humor and symbolism to spark thought and conversation. I enjoy pairing illustration with publications to bring energy, critique, and visual storytelling into the editorial space.</span><span class=\"lang-es\">Creo ilustraciones digitales con un enfoque en comentario político y satírico, utilizando el humor y el simbolismo para generar reflexión y debate. Disfruto combinando ilustración y publicaciones para aportar energía, crítica y narrativa visual al espacio editorial.</span>",
         images: [
-            { src: "portfolio_images/illustrations/accessory.jpg", label: "<span class=\"lang-en\">Oil on Canvas</span><span class=\"lang-es\">Óleo sobre lienzo</span>" },
-            { src: "portfolio_images/illustrations/divine_feminine_-_april_5,_2025_17.41.png", label: "<span class=\"lang-en\">Digital</span><span class=\"lang-es\">Digital</span>" },
-            { src: "portfolio_images/illustrations/algorithm.png", label: "<span class=\"lang-en\">Digital</span><span class=\"lang-es\">Digital</span>" },
-            { src: "portfolio_images/illustrations/7deadlysins.png", label: "<span class=\"lang-en\">Digital</span><span class=\"lang-es\">Digital</span>" },
-            { src: "portfolio_images/illustrations/gangster_birds.png", label: "<span class=\"lang-en\">Oil on Canvas</span><span class=\"lang-es\">Óleo sobre lienzo</span>" },
-            { src: "portfolio_images/illustrations/tax.png", label: "<span class=\"lang-en\">Digital</span><span class=\"lang-es\">Digital</span>" }
+            { src: "portfolio_images/illustrations/accessory.jpg", label: "<strong>Accessory</strong>, 2026<br><span class=\"lang-en\">Oil on Canvas</span><span class=\"lang-es\">Óleo sobre lienzo</span>" },
+            { src: "portfolio_images/illustrations/divine_feminine_-_april_5,_2025_17.41.png", label: "<strong>Divine Feminine</strong>, 2025<br><span class=\"lang-en\">Digital</span><span class=\"lang-es\">Digital</span>" },
+            { src: "portfolio_images/illustrations/algorithm.png", label: "<strong>Algor</strong>, 2025<br><span class=\"lang-en\">Digital</span><span class=\"lang-es\">Digital</span>" },
+            { src: "portfolio_images/illustrations/7deadlysins.png", label: "<strong>Seven Deadly Sins</strong><br><span class=\"lang-en\">Digital</span><span class=\"lang-es\">Digital</span>" },
+            { src: "portfolio_images/illustrations/gangster_birds.png", label: "<strong>The Meeting</strong>, 2026<br><span class=\"lang-en\">Oil on Canvas</span><span class=\"lang-es\">Óleo sobre lienzo</span>" },
+            { src: "portfolio_images/illustrations/tax.png", label: "<strong>Reble</strong>, 2025<br><span class=\"lang-en\">Digital</span><span class=\"lang-es\">Digital</span>" }
         ]
     },
     adhd: {
