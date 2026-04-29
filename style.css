@@ -595,3 +595,62 @@ p {
     .editorial-nav { flex-direction: column; gap: 1.5rem; text-align: center; }
     .ed-footer { flex-direction: column; text-align: center; }
 }
+
+/* Language Switcher Logic */
+html[lang="en"] .lang-es { display: none !important; }
+html[lang="es"] .lang-en { display: none !important; }
+
+/* Language Switcher UI */
+.language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    padding: 0.5rem;
+    border-radius: 50px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.language-switcher button {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    transition: all 0.3s;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+.language-switcher button:hover {
+    color: var(--text-main);
+}
+
+.language-switcher button.active {
+    background: var(--accent-color);
+    color: #fff;
+}
+
+/* Specific adjustment for editorial resume */
+.ed-lang-switcher {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.ed-lang-switcher button {
+    color: #888;
+}
+.ed-lang-switcher button:hover {
+    color: #0b291d;
+}
+.ed-lang-switcher button.active {
+    background: #0b291d;
+    color: #fff;
+}
