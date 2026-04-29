@@ -126,6 +126,7 @@ const projectData = {
         tag: "<span class=\"lang-en\">Illustration</span><span class=\"lang-es\">Ilustración</span>",
         description: "<span class=\"lang-en\">I create digital illustrations that lean into political and satirical commentary, using humor and symbolism to spark thought and conversation. I enjoy pairing illustration with publications to bring energy, critique, and visual storytelling into the editorial space.</span><span class=\"lang-es\">Creo ilustraciones digitales con un enfoque en comentario político y satírico, utilizando el humor y el simbolismo para generar reflexión y debate. Disfruto combinando ilustración y publicaciones para aportar energía, crítica y narrativa visual al espacio editorial.</span>",
         images: [
+            "portfolio_images/illustrations/accessory.jpg",
             "portfolio_images/illustrations/divine_feminine_-_april_5,_2025_17.41.png",
             "portfolio_images/illustrations/algorithm.png",
             "portfolio_images/illustrations/7deadlysins.png",
