@@ -126,12 +126,12 @@ const projectData = {
         tag: "<span class=\"lang-en\">Illustration</span><span class=\"lang-es\">Ilustración</span>",
         description: "<span class=\"lang-en\">I create digital illustrations that lean into political and satirical commentary, using humor and symbolism to spark thought and conversation. I enjoy pairing illustration with publications to bring energy, critique, and visual storytelling into the editorial space.</span><span class=\"lang-es\">Creo ilustraciones digitales con un enfoque en comentario político y satírico, utilizando el humor y el simbolismo para generar reflexión y debate. Disfruto combinando ilustración y publicaciones para aportar energía, crítica y narrativa visual al espacio editorial.</span>",
         images: [
-            "portfolio_images/illustrations/accessory.jpg",
-            "portfolio_images/illustrations/divine_feminine_-_april_5,_2025_17.41.png",
-            "portfolio_images/illustrations/algorithm.png",
-            "portfolio_images/illustrations/7deadlysins.png",
-            "portfolio_images/illustrations/gangster_birds.png",
-            "portfolio_images/illustrations/tax.png"
+            { src: "portfolio_images/illustrations/accessory.jpg", label: "<span class=\"lang-en\">Oil on Canvas</span><span class=\"lang-es\">Óleo sobre lienzo</span>" },
+            { src: "portfolio_images/illustrations/divine_feminine_-_april_5,_2025_17.41.png", label: "<span class=\"lang-en\">Digital</span><span class=\"lang-es\">Digital</span>" },
+            { src: "portfolio_images/illustrations/algorithm.png", label: "<span class=\"lang-en\">Digital</span><span class=\"lang-es\">Digital</span>" },
+            { src: "portfolio_images/illustrations/7deadlysins.png", label: "<span class=\"lang-en\">Digital</span><span class=\"lang-es\">Digital</span>" },
+            { src: "portfolio_images/illustrations/gangster_birds.png", label: "<span class=\"lang-en\">Oil on Canvas</span><span class=\"lang-es\">Óleo sobre lienzo</span>" },
+            { src: "portfolio_images/illustrations/tax.png", label: "<span class=\"lang-en\">Digital</span><span class=\"lang-es\">Digital</span>" }
         ]
     },
     adhd: {
@@ -218,15 +218,20 @@ function openModal(projectId) {
     else if (data.type === "carousel") {
         currentCarouselImages = data.images;
         slideIndex = 0;
+        const firstImgSrc = typeof currentCarouselImages[0] === 'string' ? currentCarouselImages[0] : currentCarouselImages[0].src;
+        const firstImgLabel = typeof currentCarouselImages[0] === 'object' && currentCarouselImages[0].label ? currentCarouselImages[0].label : '';
         html += `
             <div class="carousel-wrap">
                 <div class="carousel-content-box">
-                    <img id="carousel-main" src="${currentCarouselImages[0]}" class="carousel-img">
+                    <img id="carousel-main" src="${firstImgSrc}" class="carousel-img">
+                    <div id="carousel-caption" class="carousel-caption" style="margin-top: 1rem; color: var(--text-muted); font-style: italic; text-align: center; font-family: var(--font-heading); font-size: 1.1rem; letter-spacing: 1px;">
+                        ${firstImgLabel}
+                    </div>
                 </div>
                 <div class="carousel-controls">
-                    <button class="ctrl-btn left-btn" onclick="prevSlide()">← Previous</button>
+                    <button class="ctrl-btn left-btn" onclick="prevSlide()"><span class="lang-en">← Previous</span><span class="lang-es">← Anterior</span></button>
                     <span id="carousel-counter" class="carousel-counter">1 / ${currentCarouselImages.length}</span>
-                    <button class="ctrl-btn right-btn" onclick="nextSlide()">Next →</button>
+                    <button class="ctrl-btn right-btn" onclick="nextSlide()"><span class="lang-en">Next →</span><span class="lang-es">Siguiente →</span></button>
                 </div>
             </div>
         `;
@@ -253,7 +258,15 @@ function nextSlide() {
 function updateSlide() {
     const imgEl = document.getElementById('carousel-main');
     const countEl = document.getElementById('carousel-counter');
-    if(imgEl) imgEl.src = currentCarouselImages[slideIndex];
+    const captionEl = document.getElementById('carousel-caption');
+    const currentImg = currentCarouselImages[slideIndex];
+    
+    if(imgEl) {
+        imgEl.src = typeof currentImg === 'string' ? currentImg : currentImg.src;
+    }
+    if(captionEl) {
+        captionEl.innerHTML = typeof currentImg === 'object' && currentImg.label ? currentImg.label : '';
+    }
     if(countEl) countEl.innerText = `${slideIndex + 1} / ${currentCarouselImages.length}`;
 }
 
